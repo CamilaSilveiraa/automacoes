@@ -1,0 +1,19 @@
+ORGANIZADOR DE FOTOS POR SELO
+
+Como usar
+1. Coloque a planilha .xlsx em "dados". Para compatibilidade com a versão anterior, a pasta "BD" também é aceita.
+2. Coloque as imagens diretamente na pasta "imagens".
+3. Execute "Executar_Organizador.bat" ou "OrganizadorFotos.exe". Ao fim, pressione uma tecla para fechar.
+4. O resultado será criado em "temporario_fotos\\NOME DO EMPREENDIMENTO\\NOME DO SELO".
+
+Colunas obrigatórias na planilha
+- Selo (por exemplo, o número/nome do selo)
+- SbjNum (número usado no início do arquivo: S<SbjNum>_...)
+- Emp. (nome do empreendimento)
+
+Importante
+- As imagens são MOVIDAS da pasta "imagens" para o destino, mantendo a lógica do processo anterior.
+- Cada linha da planilha associa o selo ao respectivo SbjNum. Quando um selo se repete com outro SbjNum, é criada uma nova pasta com o sufixo "_selo_repetido".
+- Se existir um arquivo com o mesmo nome no destino, é criada uma cópia com sufixo (2), (3) etc., sem sobrescrever.
+- Para um selo sem imagens correspondentes, nenhuma pasta é criada. Ao final, o terminal mostra um relatório com os selos processados e os que não possuem imagens.
+- O executável não exige Python nem IDE no computador de quem o usar.
